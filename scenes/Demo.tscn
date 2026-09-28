@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bluradpy72fne"]
+
+[ext_resource type="Script" uid="uid://080e82hborfr" path="res://scripts/test.gd" id="1_puwen"]
+[ext_resource type="Texture2D" uid="uid://b4kc016mlfb0h" path="res://assests/campusMapfinal.svg" id="2_utl8k"]
+
+[node name="Node2D" type="Node2D" unique_id=1047546442]
+
+[node name="Control" type="Control" parent="." unique_id=1580930218]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("1_puwen")
+
+[node name="QuestionImage" type="TextureRect" parent="Control" unique_id=1558856263]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 2.0
+offset_right = 1276.0
+offset_bottom = 722.0
+scale = Vector2(16, 16)
+
+[node name="Label" type="Label" parent="Control" unique_id=1340324219]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="map" type="Sprite2D" parent="Control" unique_id=1052423911]
+position = Vector2(1016.99994, 357)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_utl8k")
+
+[node name="marker" type="Sprite2D" parent="Control/map" unique_id=1202795920]
+visible = false
+position = Vector2(-7349.3745, 719.62714)
+
+[node name="next" type="Button" parent="Control" unique_id=387829234]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 644.00006
+offset_right = 209.0
+offset_bottom = 675.00006
+scale = Vector2(3, 1.939)
+text = "NEXT
+"
+
+[node name="save" type="Button" parent="Control" unique_id=1509238182]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 650.0
+offset_right = 56.0
+offset_bottom = 681.0
+scale = Vector2(3, 1.91)
+text = "save"
+
+[connection signal="pressed" from="Control/next" to="Control" method="_on_next_pressed"]
+[connection signal="pressed" from="Control/save" to="Control" method="_on_save_pressed"]

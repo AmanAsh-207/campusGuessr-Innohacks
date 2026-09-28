@@ -1,0 +1,226 @@
+[gd_scene format=3 uid="uid://ci5c2jkwnbk7e"]
+
+[ext_resource type="Script" uid="uid://blx8d4p6og0u0" path="res://scenes/add_image.gd" id="1_yp76v"]
+[ext_resource type="Texture2D" uid="uid://8mykt2xaxajo" path="res://assests/buttons/cancel/cancel_button_normal.png" id="2_0rge5"]
+[ext_resource type="Texture2D" uid="uid://cvyoc3y5lptqs" path="res://assests/uploadImagesUI.png" id="2_hfsuo"]
+[ext_resource type="Texture2D" uid="uid://dynnqtor6n5yk" path="res://assests/buttons/cancel/cancel_button_pressed.png" id="3_gwua4"]
+[ext_resource type="Texture2D" uid="uid://c7mdo7doimhpl" path="res://assests/buttons/cancel/cancel_button_hover.png" id="4_4rthe"]
+[ext_resource type="Texture2D" uid="uid://dx5v5b6ye6ywu" path="res://assests/buttons/next/next_button_normal.png" id="5_35l6q"]
+[ext_resource type="Texture2D" uid="uid://d1bk7saf06lfm" path="res://assests/buttons/next/next_button_pressed.png" id="6_tdx61"]
+[ext_resource type="Texture2D" uid="uid://bujxbkkl0aoxw" path="res://assests/buttons/next/next_button_hover.png" id="7_syhk4"]
+[ext_resource type="Texture2D" uid="uid://cwr26033khypb" path="res://assests/Sprite-0003.png" id="9_gwua4"]
+
+[node name="UploadImagePopup" type="Control" unique_id=1837767838]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yp76v")
+metadata/_edit_lock_ = true
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=892099236]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="PanelCenter" type="Panel" parent="." unique_id=1929648503]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.0
+offset_top = -148.0
+offset_right = 110.26001
+offset_bottom = 148.87802
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelCenter" unique_id=125982183]
+layout_mode = 0
+offset_right = 280.26
+offset_bottom = 297.87802
+
+[node name="VBoxContainer" type="Control" parent="PanelCenter/MarginContainer" unique_id=1427256103]
+layout_mode = 2
+
+[node name="PageRules" type="Control" parent="PanelCenter/MarginContainer/VBoxContainer" unique_id=756164035]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -348.74
+offset_bottom = -9.121979
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="Control" parent="PanelCenter/MarginContainer/VBoxContainer/PageRules" unique_id=102686742]
+anchors_preset = 0
+offset_left = -8.369995
+offset_top = 57.87802
+offset_right = -8.369995
+offset_bottom = 57.87802
+
+[node name="TextureRect" type="TextureRect" parent="PanelCenter/MarginContainer/VBoxContainer/PageRules/HBoxContainer" unique_id=416506372]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -248.0
+offset_top = -259.0
+offset_right = 3010.7307
+offset_bottom = 2257.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.275, 0.275)
+mouse_filter = 0
+texture = ExtResource("2_hfsuo")
+
+[node name="CancelButton" type="TextureButton" parent="PanelCenter/MarginContainer/VBoxContainer/PageRules/HBoxContainer" unique_id=2056264695]
+z_index = 81
+layout_mode = 0
+offset_left = -20.000002
+offset_top = 208.0
+offset_right = 396.0
+offset_bottom = 360.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_0rge5")
+texture_pressed = ExtResource("3_gwua4")
+texture_hover = ExtResource("4_4rthe")
+
+[node name="NextButton" type="TextureButton" parent="PanelCenter/MarginContainer/VBoxContainer/PageRules/HBoxContainer" unique_id=910837494]
+z_index = 1
+layout_mode = 0
+offset_left = 224.0
+offset_top = 208.0
+offset_right = 640.0
+offset_bottom = 360.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_35l6q")
+texture_pressed = ExtResource("6_tdx61")
+texture_hover = ExtResource("7_syhk4")
+stretch_mode = 0
+
+[node name="PageUpload" type="Control" parent="PanelCenter/MarginContainer/VBoxContainer" unique_id=1997221925]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelCenter/MarginContainer/VBoxContainer/PageUpload" unique_id=1187135718]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.5106537
+anchor_top = -0.37100002
+anchor_right = 2.4242988
+anchor_bottom = 1.6582222
+offset_left = 783.66003
+offset_top = 0.06502533
+offset_right = 548.12177
+offset_bottom = 235.43939
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+texture = ExtResource("9_gwua4")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="titleLabel" type="Label" parent="PanelCenter/MarginContainer/VBoxContainer/PageUpload" unique_id=926222904]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.024
+anchor_top = -0.179
+anchor_right = 0.957
+anchor_bottom = -0.014
+offset_left = 29.720001
+offset_top = 4.163002
+offset_right = 29.779999
+offset_bottom = 4.158
+text = "Upload a photo
+"
+
+[node name="DropArea" type="Panel" parent="PanelCenter/MarginContainer/VBoxContainer/PageUpload" unique_id=1662257801]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.21700001
+anchor_top = -0.021000002
+anchor_right = 0.95100003
+anchor_bottom = 0.25500003
+offset_left = 0.020011902
+offset_top = 0.115021706
+offset_right = 20.980011
+offset_bottom = 5.143013
+scale = Vector2(0.94, 0.94)
+
+[node name="PreviewImage" type="TextureRect" parent="PanelCenter/MarginContainer/VBoxContainer/PageUpload/DropArea" unique_id=154746081]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HintLabel" type="Label" parent="PanelCenter/MarginContainer/VBoxContainer/PageUpload/DropArea" unique_id=279127027]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Drag & drop images here, or click Choose File"
+
+[node name="ChooseFileButton" type="Button" parent="PanelCenter/MarginContainer/VBoxContainer/PageUpload" unique_id=2003541771]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.056
+anchor_top = 0.30600002
+anchor_right = 0.78300005
+anchor_bottom = 0.41000003
+offset_left = -0.05998993
+offset_top = -0.003982544
+offset_right = 0.019989014
+offset_bottom = 0.10801697
+text = "Choose the file"
+
+[node name="HBoxContainer" type="Control" parent="PanelCenter/MarginContainer/VBoxContainer/PageUpload" unique_id=1195427917]
+anchors_preset = 0
+offset_top = 290.00003
+offset_right = 120.26001
+offset_bottom = 321.00003
+
+[node name="BackButton" type="Button" parent="PanelCenter/MarginContainer/VBoxContainer/PageUpload/HBoxContainer" unique_id=599375895]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.79600006
+anchor_top = -0.52000004
+anchor_right = -0.20600002
+anchor_bottom = 0.5
+offset_left = -0.013015747
+offset_top = -0.002008438
+offset_right = 0.03357315
+offset_bottom = -0.6220093
+text = "Back"
+
+[node name="ConfirmButton" type="Button" parent="PanelCenter/MarginContainer/VBoxContainer/PageUpload/HBoxContainer" unique_id=1236375695]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.8650001
+anchor_top = -0.423
+anchor_right = 2.4550002
+anchor_bottom = 0.5
+offset_left = -0.024917603
+offset_top = -0.009009361
+offset_right = 0.02166748
+offset_bottom = 2.3779907
+text = "Confirm"
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=431574433]
+access = 1
+
+[connection signal="pressed" from="PanelCenter/MarginContainer/VBoxContainer/PageRules/HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="PanelCenter/MarginContainer/VBoxContainer/PageRules/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="PanelCenter/MarginContainer/VBoxContainer/PageUpload/ChooseFileButton" to="." method="_on_choose_file_button_pressed"]
+[connection signal="pressed" from="PanelCenter/MarginContainer/VBoxContainer/PageUpload/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="PanelCenter/MarginContainer/VBoxContainer/PageUpload/HBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]

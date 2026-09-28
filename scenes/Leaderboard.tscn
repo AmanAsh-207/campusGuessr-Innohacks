@@ -1,0 +1,429 @@
+[gd_scene format=3 uid="uid://cktqvohtb7oqi"]
+
+[ext_resource type="Script" uid="uid://chj3ogiomxkky" path="res://scripts/leaderboard.gd" id="1_0tlxa"]
+[ext_resource type="Texture2D" uid="uid://uqh73i4cg05j" path="res://assests/leaderboard.png" id="2_bnibd"]
+[ext_resource type="Texture2D" uid="uid://7ilhiaonpl2u" path="res://assests/buttons/icon.png" id="3_cnd66"]
+[ext_resource type="FontFile" uid="uid://h3mlikty4l8h" path="res://fonts/slkscr.ttf" id="4_xa581"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cnd66"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xa581"]
+bg_color = Color(1, 0.27450368, 0.20844397, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hr3dl"]
+bg_color = Color(0.6670711, 0.016173653, 9.1448425e-07, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jftfo"]
+bg_color = Color(1, 0.4647563, 0.39338723, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="LeaderBoardOpen" type="Control" unique_id=2116320171]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0tlxa")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=831008339]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -461.0
+offset_top = -363.0
+offset_right = 487.0
+offset_bottom = 363.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bnibd")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="TextureRect" unique_id=355072916]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.164
+anchor_right = 1.1450001
+anchor_bottom = 1.6150001
+offset_left = -31.76001
+offset_top = -16.666666
+offset_right = -31.717773
+offset_bottom = -1494.967
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cnd66")
+metadata/_edit_lock_ = true
+
+[node name="closeButton" type="Button" parent="TextureRect/Panel" unique_id=1419441569]
+layout_mode = 0
+offset_left = 924.232
+offset_top = 320.5718
+offset_right = 1012.4549
+offset_bottom = 408.7947
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 73
+theme_override_styles/normal = SubResource("StyleBoxFlat_xa581")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hr3dl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jftfo")
+icon = ExtResource("3_cnd66")
+icon_alignment = 1
+
+[node name="First" type="Control" parent="TextureRect/Panel" unique_id=532880099]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 13.364014
+offset_top = 626.6667
+offset_right = 13.364014
+offset_bottom = 626.6667
+grow_horizontal = 2
+
+[node name="name" type="Label" parent="TextureRect/Panel/First" unique_id=1510599246]
+texture_filter = 1
+layout_mode = 0
+offset_left = -22.619247
+offset_top = -268.09488
+offset_right = 28.714096
+offset_bottom = -260.09488
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.102148704, 0.43017393, 0.45263702, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 7
+text = "vaibhav"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="score" type="Label" parent="TextureRect/Panel/First" unique_id=674215550]
+texture_filter = 1
+layout_mode = 0
+offset_left = -28.619179
+offset_top = -238.09488
+offset_right = -6.2858505
+offset_bottom = -230.09488
+rotation = -0.013117648
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.08235294, 0.36862746, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 7
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="matches" type="Label" parent="TextureRect/Panel/First" unique_id=1919746266]
+texture_filter = 1
+layout_mode = 0
+offset_left = 91.38077
+offset_top = -238.09488
+offset_right = 104.04744
+offset_bottom = -230.09488
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.08235294, 0.36862746, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 7
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="second" type="Control" parent="TextureRect/Panel" unique_id=55185939]
+anchors_preset = 0
+offset_left = -605.06134
+offset_top = -726.6666
+offset_right = -537.06134
+offset_bottom = -658.6666
+
+[node name="name" type="Label" parent="TextureRect/Panel/second" unique_id=390282669]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.087333
+anchor_top = 0.5931372
+anchor_right = 1.087333
+anchor_bottom = 0.5931372
+offset_left = 1031.3547
+offset_top = 1116.905
+offset_right = 1082.4658
+offset_bottom = 1124.905
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.08235294, 0.36862746, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 7
+text = "name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="TextureRect/Panel/second" unique_id=1065645794]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1098.2932
+offset_top = 1188.2383
+offset_right = 1120.9598
+offset_bottom = 1196.2383
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.08235294, 0.36862746, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 7
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="matches" type="Label" parent="TextureRect/Panel/second" unique_id=1132597128]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1215.2933
+offset_top = 1188.2385
+offset_right = 1228.6267
+offset_bottom = 1196.2385
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.08235294, 0.36862746, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 7
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="third" type="Control" parent="TextureRect/Panel" unique_id=4321334]
+anchors_preset = 0
+offset_left = 236.0
+offset_top = 119.5
+offset_right = 276.0
+offset_bottom = 159.5
+
+[node name="name" type="Label" parent="TextureRect/Panel/third" unique_id=1005006396]
+texture_filter = 1
+layout_mode = 0
+offset_left = 489.232
+offset_top = 311.07184
+offset_right = 540.232
+offset_bottom = 319.07184
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.08235294, 0.36862746, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 7
+text = "name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="TextureRect/Panel/third" unique_id=557892335]
+texture_filter = 1
+layout_mode = 0
+offset_left = 482.232
+offset_top = 341.0718
+offset_right = 504.89868
+offset_bottom = 349.0718
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.08235294, 0.36862746, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 7
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="matches" type="Label" parent="TextureRect/Panel/third" unique_id=1474033188]
+texture_filter = 1
+layout_mode = 0
+offset_left = 600.23193
+offset_top = 341.0718
+offset_right = 612.5653
+offset_bottom = 349.0718
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.08235294, 0.36862746, 0.3882353, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 7
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer2" type="GridContainer" parent="." unique_id=1890485936]
+layout_mode = 0
+offset_left = 653.0
+offset_top = 370.0
+offset_right = 915.0
+offset_bottom = 627.0
+theme_override_constants/h_separation = 58
+columns = 2
+
+[node name="score" type="Label" parent="GridContainer2" unique_id=1505762555]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="matches" type="Label" parent="GridContainer2" unique_id=1918695585]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="score2" type="Label" parent="GridContainer2" unique_id=977087117]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="matches2" type="Label" parent="GridContainer2" unique_id=2067478928]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="score3" type="Label" parent="GridContainer2" unique_id=1352383329]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="matches3" type="Label" parent="GridContainer2" unique_id=537176812]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="score4" type="Label" parent="GridContainer2" unique_id=1763976052]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="matches4" type="Label" parent="GridContainer2" unique_id=2093162995]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="score5" type="Label" parent="GridContainer2" unique_id=820743000]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="matches5" type="Label" parent="GridContainer2" unique_id=327135589]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1411214458]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 370.0
+offset_right = 581.0
+offset_bottom = 511.0
+theme_override_constants/h_separation = 62
+columns = 2
+
+[node name="Label" type="Label" parent="GridContainer" unique_id=1368007132]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.009317499, 0.009317501, 0.009317499, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "4"
+horizontal_alignment = 1
+
+[node name="name" type="Label" parent="GridContainer" unique_id=1866454502]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="Label2" type="Label" parent="GridContainer" unique_id=622894523]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.009317499, 0.009317501, 0.009317499, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "5"
+horizontal_alignment = 1
+
+[node name="name2" type="Label" parent="GridContainer" unique_id=697114944]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="Label3" type="Label" parent="GridContainer" unique_id=620281654]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.009317499, 0.009317501, 0.009317499, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "6"
+horizontal_alignment = 1
+
+[node name="name3" type="Label" parent="GridContainer" unique_id=787752327]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="Label4" type="Label" parent="GridContainer" unique_id=141557164]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.009317499, 0.009317501, 0.009317499, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "7"
+horizontal_alignment = 1
+
+[node name="name4" type="Label" parent="GridContainer" unique_id=909365093]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"
+
+[node name="Label5" type="Label" parent="GridContainer" unique_id=1424592351]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.009317499, 0.009317501, 0.009317499, 1)
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "8"
+horizontal_alignment = 1
+
+[node name="name5" type="Label" parent="GridContainer" unique_id=504750638]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xa581")
+theme_override_font_sizes/font_size = 24
+text = "afdfad"

@@ -1,0 +1,271 @@
+[gd_scene format=3 uid="uid://bhiy24hceyu61"]
+
+[ext_resource type="Script" uid="uid://d1ki786odwqqq" path="res://scripts/map_container.gd" id="1_0bbpv"]
+[ext_resource type="Script" uid="uid://c68icspncj2u6" path="res://scripts/main.gd" id="1_rarhs"]
+[ext_resource type="Texture2D" uid="uid://b4kc016mlfb0h" path="res://assests/campusMapfinal.svg" id="2_rarhs"]
+[ext_resource type="Texture2D" uid="uid://dgvmls3e4e2nq" path="res://assests/location_on.png" id="4_nxtc6"]
+[ext_resource type="Texture2D" uid="uid://dslfnpcd2c4ma" path="res://assests/Flag.png" id="5_nxtc6"]
+[ext_resource type="FontFile" uid="uid://h3mlikty4l8h" path="res://fonts/slkscr.ttf" id="6_c01mt"]
+[ext_resource type="Texture2D" uid="uid://bddrpnnlc0pcs" path="res://assests/timer_bg.png" id="6_nxtc6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c01mt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rarhs"]
+bg_color = Color(0.13725491, 0.07058824, 0.6, 1)
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c01mt"]
+bg_color = Color(0.015546473, 0.015468189, 0.38375473, 1)
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxtc6"]
+bg_color = Color(0.05882353, 0, 0.70980394, 1)
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Control" type="Control" unique_id=1226605523]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rarhs")
+
+[node name="MapContainer" type="Panel" parent="." unique_id=1031972948]
+z_index = 1
+clip_contents = true
+layout_mode = 0
+offset_left = 925.0
+offset_top = 327.0
+offset_right = 1244.9998
+offset_bottom = 646.99976
+script = ExtResource("1_0bbpv")
+
+[node name="mapRoot" type="Node2D" parent="MapContainer" unique_id=664621687]
+position = Vector2(160, 160)
+scale = Vector2(0.245, 0.245)
+
+[node name="Map" type="Sprite2D" parent="MapContainer/mapRoot" unique_id=286749515]
+texture_filter = 1
+texture = ExtResource("2_rarhs")
+
+[node name="Marker" type="Sprite2D" parent="MapContainer/mapRoot" unique_id=1985989485]
+visible = false
+texture = ExtResource("4_nxtc6")
+centered = false
+offset = Vector2(-48, -90)
+
+[node name="AnswerMarker" type="Sprite2D" parent="MapContainer/mapRoot" unique_id=1002215476]
+visible = false
+self_modulate = Color(0.5445881, 0.99999994, 0.5581658, 1)
+texture = ExtResource("5_nxtc6")
+
+[node name="DistanceLine" type="Line2D" parent="MapContainer/mapRoot" unique_id=154291392]
+visible = false
+
+[node name="BlackScreen" type="TextureRect" parent="." unique_id=1590716184]
+layout_mode = 0
+offset_top = -23.0
+offset_right = 5120.0
+offset_bottom = 3072.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_nxtc6")
+stretch_mode = 5
+metadata/_edit_lock_ = true
+
+[node name="CountdownLabel" type="Label" parent="BlackScreen" unique_id=2112657725]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -151.5
+offset_right = 165.0
+offset_bottom = 403.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_color = Color(0.75686276, 0.49019608, 0.13725491, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_fonts/font = ExtResource("6_c01mt")
+theme_override_font_sizes/font_size = 554
+text = "1"
+horizontal_alignment = 1
+
+[node name="RoundLabel" type="Label" parent="BlackScreen" unique_id=1089391141]
+layout_mode = 0
+offset_left = 4276.0
+offset_top = 224.0
+offset_right = 4352.0
+offset_bottom = 265.0
+scale = Vector2(3, 3)
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("6_c01mt")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c01mt")
+text = "1/5"
+
+[node name="kiet" type="Label" parent="BlackScreen" unique_id=436809212]
+layout_mode = 0
+offset_left = 3904.0
+offset_top = 224.0
+offset_right = 3994.0
+offset_bottom = 265.0
+scale = Vector2(3, 3)
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("6_c01mt")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c01mt")
+text = "kiet"
+
+[node name="0" type="Label" parent="BlackScreen" unique_id=1456731599]
+layout_mode = 0
+offset_left = 4692.0
+offset_top = 224.0
+offset_right = 4789.0
+offset_bottom = 265.0
+scale = Vector2(3, 3)
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("6_c01mt")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c01mt")
+text = "0"
+
+[node name="RoundLabel2" type="Label" parent="BlackScreen" unique_id=1603246712]
+layout_mode = 0
+offset_left = 4277.0
+offset_top = 164.0
+offset_right = 4377.0
+offset_bottom = 205.0
+scale = Vector2(3, 3)
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_color = Color(0, 0.8156863, 0.827451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.10980392, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("6_c01mt")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c01mt")
+text = "round"
+
+[node name="map" type="Label" parent="BlackScreen" unique_id=743511207]
+layout_mode = 0
+offset_left = 3909.0
+offset_top = 164.0
+offset_right = 3999.0
+offset_bottom = 205.0
+scale = Vector2(3, 3)
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_color = Color(0, 0.8156863, 0.827451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.10980392, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("6_c01mt")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c01mt")
+text = "MAP"
+
+[node name="score" type="Label" parent="BlackScreen" unique_id=223113442]
+layout_mode = 0
+offset_left = 4693.0
+offset_top = 164.0
+offset_right = 4790.0
+offset_bottom = 205.0
+scale = Vector2(3, 3)
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_color = Color(0, 0.8156863, 0.827451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.10980392, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("6_c01mt")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c01mt")
+text = "score"
+
+[node name="round" type="Label" parent="BlackScreen" unique_id=1892147715]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -417.5
+offset_right = -216.0
+offset_bottom = -339.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_color = Color(0.4509804, 0.7372549, 0.88235295, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("6_c01mt")
+theme_override_font_sizes/font_size = 77
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c01mt")
+text = "round"
+
+[node name="round2" type="Label" parent="BlackScreen" unique_id=772884677]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 396.0
+offset_top = -417.5
+offset_right = 444.0
+offset_bottom = -339.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_color = Color(0.4509804, 0.7372549, 0.88235295, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("6_c01mt")
+theme_override_font_sizes/font_size = 77
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c01mt")
+text = "1"
+
+[node name="QuestionImage" type="TextureRect" parent="." unique_id=741326046]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="GuessButton" type="Button" parent="." unique_id=1731590345]
+visible = false
+layout_mode = 0
+offset_left = 924.99994
+offset_top = 647.0
+offset_right = 1245.0
+offset_bottom = 682.0
+theme_override_fonts/font = ExtResource("6_c01mt")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_rarhs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c01mt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nxtc6")
+text = "Guess"
+
+[connection signal="mouse_entered" from="MapContainer" to="MapContainer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MapContainer" to="MapContainer" method="_on_mouse_exited"]

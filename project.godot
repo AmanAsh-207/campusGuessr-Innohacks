@@ -1,0 +1,38 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="campusGuessr (for innohacks 4.0)"
+run/main_scene="uid://cs1hk5pxv4gls"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://assests/icon.svg"
+
+[autoload]
+
+GameState="*uid://b5ttq3x8wtn5g"
+Supabase="*uid://6kbt6tb7r75d"
+WebFileUpload="*uid://dc0itpm2l6adc"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"

@@ -1,0 +1,366 @@
+[gd_scene format=3 uid="uid://cs1hk5pxv4gls"]
+
+[ext_resource type="Script" uid="uid://dg68i86mg8roi" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://c4gn2cy8sjcxq" path="res://assests/faith-spark-background1 2.png" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://dsoe6jh7kamf" path="res://assests/New Piskel-2.png(3) 1.png" id="3_8ln24"]
+[ext_resource type="Texture2D" uid="uid://ddtbi0vetvde0" path="res://assests/label.png" id="3_wu84c"]
+[ext_resource type="Texture2D" uid="uid://xjrsl1y07gu7" path="res://assests/buttons/play/play_button_normal.png" id="5_oa1go"]
+[ext_resource type="Texture2D" uid="uid://bg25v3c0xkg4" path="res://assests/buttons/play/play_button_pressed.png" id="6_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://cm7sq5guirab0" path="res://assests/buttons/play/play_button_hover.png" id="7_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://cylmbr3gb2nuk" path="res://assests/buttons/multiplayer/multiplayer_button_normal.png" id="8_5pajh"]
+[ext_resource type="Texture2D" uid="uid://cro2nwd1lly5u" path="res://assests/buttons/multiplayer/multiplayer_button_pressed.png" id="9_j7ex8"]
+[ext_resource type="Texture2D" uid="uid://jx4fq0sj2o1f" path="res://assests/buttons/multiplayer/multiplayer_button_hover.png" id="10_a8gd2"]
+[ext_resource type="Texture2D" uid="uid://cnpvsyfn0m4f5" path="res://assests/buttons/leaderboard/leaderboard_button_normal.png" id="11_hstxw"]
+[ext_resource type="Texture2D" uid="uid://db1x26oqh5np4" path="res://assests/buttons/leaderboard/leaderboard_button_pressed.png" id="12_8egab"]
+[ext_resource type="Texture2D" uid="uid://coe63vy5rupln" path="res://assests/buttons/leaderboard/leaderboard_button_hover.png" id="13_gw5y6"]
+[ext_resource type="Texture2D" uid="uid://cwfqi6o0t718s" path="res://assests/buttons/uploadimage/uploadimage_button_normal.png" id="14_hstxw"]
+[ext_resource type="Texture2D" uid="uid://cxodti4m1fado" path="res://assests/buttons/uploadimage/uploadimage_button_pressed.png" id="15_8egab"]
+[ext_resource type="Texture2D" uid="uid://blh2y5ri13s6o" path="res://assests/buttons/uploadimage/uploadimage_button_hover.png" id="16_gw5y6"]
+[ext_resource type="PackedScene" uid="uid://cktqvohtb7oqi" path="res://scenes/Leaderboard.tscn" id="17_hstxw"]
+[ext_resource type="PackedScene" uid="uid://ci5c2jkwnbk7e" path="res://scenes/AddImage.tscn" id="17_j7ex8"]
+[ext_resource type="Script" uid="uid://drlqj34oev12e" path="res://scripts/login.gd" id="18_a8gd2"]
+[ext_resource type="Texture2D" uid="uid://juaa5fw0jb83" path="res://assests/loginUI.png" id="19_8egab"]
+[ext_resource type="Texture2D" uid="uid://bwg642hr1l67i" path="res://assests/guest_dp.png" id="20_gw5y6"]
+[ext_resource type="FontFile" uid="uid://h3mlikty4l8h" path="res://fonts/slkscr.ttf" id="21_svtp6"]
+[ext_resource type="Texture2D" uid="uid://cwr26033khypb" path="res://assests/Sprite-0003.png" id="23_1dfpl"]
+[ext_resource type="Texture2D" uid="uid://bgv3eag03df3u" path="res://assests/buttons/close.png" id="24_qywvv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbmy8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hstxw"]
+bg_color = Color(0.10636855, 2.9215365e-05, 0.40626052, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gw5y6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svtp6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dfpl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qywvv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wgol"]
+bg_color = Color(0.21958274, 0.23844543, 0.36959365, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1acrt"]
+bg_color = Color(0.11943584, 0.13837901, 0.3166622, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vr8o3"]
+
+[node name="main_menu" type="Node2D" unique_id=572400902]
+script = ExtResource("1_l6cm7")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2674868]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_bqqt6")
+
+[node name="menu_background" type="TextureRect" parent="Background" unique_id=564142303]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -225.0
+offset_right = 250.0
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8ln24")
+
+[node name="label" type="TextureRect" parent="Background" unique_id=282189754]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 57.0
+offset_right = 674.0
+offset_bottom = 264.0
+texture = ExtResource("3_wu84c")
+
+[node name="Panel" type="Panel" parent="Background" unique_id=1911459052]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 205.0
+offset_right = 770.0
+offset_bottom = 565.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tbmy8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/Panel" unique_id=882064325]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -158.0
+offset_right = 104.0
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="TextureButton" parent="Background/Panel/VBoxContainer" unique_id=1548374893]
+texture_filter = 1
+custom_minimum_size = Vector2(208, 76)
+layout_mode = 2
+texture_normal = ExtResource("5_oa1go")
+texture_pressed = ExtResource("6_tbmy8")
+texture_hover = ExtResource("7_jk1qb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Multiplayer" type="TextureButton" parent="Background/Panel/VBoxContainer" unique_id=246239049]
+texture_filter = 1
+custom_minimum_size = Vector2(208, 76)
+layout_mode = 2
+texture_normal = ExtResource("8_5pajh")
+texture_pressed = ExtResource("9_j7ex8")
+texture_hover = ExtResource("10_a8gd2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Leaderboard" type="TextureButton" parent="Background/Panel/VBoxContainer" unique_id=204446644]
+texture_filter = 1
+custom_minimum_size = Vector2(208, 76)
+layout_mode = 2
+texture_normal = ExtResource("11_hstxw")
+texture_pressed = ExtResource("12_8egab")
+texture_hover = ExtResource("13_gw5y6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="UploadImage" type="TextureButton" parent="Background/Panel/VBoxContainer" unique_id=1040606047]
+texture_filter = 1
+custom_minimum_size = Vector2(208, 76)
+layout_mode = 2
+texture_normal = ExtResource("14_hstxw")
+texture_pressed = ExtResource("15_8egab")
+texture_hover = ExtResource("16_gw5y6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LeaderBoardOpen" parent="." unique_id=2116320171 instance=ExtResource("17_hstxw")]
+visible = false
+offset_left = 625.0
+offset_top = 384.0
+offset_right = 625.0
+offset_bottom = 384.0
+
+[node name="UploadImagePopup" parent="." unique_id=1837767838 instance=ExtResource("17_j7ex8")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 645.0
+offset_top = 402.0
+offset_right = 645.0
+offset_bottom = 402.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="login_ui" type="Node2D" parent="." unique_id=1437312766]
+
+[node name="Nameplate" type="Button" parent="login_ui" unique_id=67139502]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1110.0
+offset_top = 18.0
+offset_right = 1260.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_hstxw")
+
+[node name="LoginUi" type="Sprite2D" parent="login_ui/Nameplate" unique_id=756073360]
+position = Vector2(61, 18)
+texture = ExtResource("19_8egab")
+
+[node name="DP" type="Button" parent="login_ui" unique_id=1883614986]
+offset_left = 1087.0
+offset_top = 16.0
+offset_right = 1362.0
+offset_bottom = 254.0
+scale = Vector2(0.19064811, 0.19064811)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gw5y6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_svtp6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1dfpl")
+icon = ExtResource("20_gw5y6")
+
+[node name="Guest_label" type="Label" parent="login_ui" unique_id=1453867509]
+offset_left = 1140.0
+offset_top = 19.0
+offset_right = 1252.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(3.3691526e-07, 0.5210407, 0.5210409, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("21_svtp6")
+theme_override_font_sizes/font_size = 20
+text = "Aman"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 5
+
+[node name="login_bg" type="Control" parent="." unique_id=1992101234]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("18_a8gd2")
+
+[node name="loginPanel" type="Panel" parent="login_bg" unique_id=844958306]
+layout_mode = 0
+offset_left = 1083.0
+offset_top = 17.0
+offset_right = 1252.0
+offset_bottom = 271.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qywvv")
+
+[node name="TextureRect" type="TextureRect" parent="login_bg/loginPanel" unique_id=1302530554]
+layout_mode = 0
+offset_left = -60.0
+offset_top = -150.0
+offset_right = 240.0
+offset_bottom = 350.0
+texture = ExtResource("23_1dfpl")
+
+[node name="UsernameInput" type="LineEdit" parent="login_bg/loginPanel" unique_id=1106111244]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 74.0
+offset_right = 135.64
+offset_bottom = 105.0
+scale = Vector2(1.1333467, 0.75552607)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wgol")
+placeholder_text = "Username"
+expand_to_text_length = true
+
+[node name="passwordInput" type="LineEdit" parent="login_bg/loginPanel" unique_id=1633816615]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 144.0
+offset_right = 135.64
+offset_bottom = 175.0
+scale = Vector2(1.1333467, 0.75552607)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wgol")
+placeholder_text = "Password"
+expand_to_text_length = true
+secret = true
+
+[node name="SubmitLogin" type="Button" parent="login_bg/loginPanel" unique_id=49016119]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 173.0
+offset_right = 136.0
+offset_bottom = 204.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1acrt")
+text = "Enter
+"
+
+[node name="CloseButton" type="Button" parent="login_bg/loginPanel" unique_id=1470245837]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 31.0
+offset_right = 236.0
+offset_bottom = 123.0
+scale = Vector2(0.25, 0.25)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vr8o3")
+icon = ExtResource("24_qywvv")
+
+[node name="EmailInput" type="LineEdit" parent="login_bg/loginPanel" unique_id=2096260621]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 109.0
+offset_right = 135.64
+offset_bottom = 140.0
+scale = Vector2(1.1333467, 0.75552607)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wgol")
+placeholder_text = "Email"
+
+[node name="login" type="Button" parent="login_bg/loginPanel" unique_id=759893250]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 247.0
+offset_right = 110.0
+offset_bottom = 278.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wgol")
+text = "LOGIN"
+
+[node name="Register" type="Button" parent="login_bg/loginPanel" unique_id=525496702]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 247.0
+offset_right = 110.0
+offset_bottom = 278.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wgol")
+text = "REGISTER"
+
+[node name="Control" type="Control" parent="login_bg/loginPanel" unique_id=1902969753]
+visible = false
+anchors_preset = 0
+offset_left = 13.0
+offset_top = 30.0
+offset_right = 125.0
+offset_bottom = 225.0
+
+[node name="Logout" type="Button" parent="login_bg/loginPanel/Control" unique_id=705078224]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 22.0
+offset_right = 84.0
+offset_bottom = 53.0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wgol")
+text = "logout"
+
+[node name="UserName" type="Label" parent="login_bg/loginPanel/Control" unique_id=1888480102]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 44.0
+offset_right = 42.0
+offset_bottom = 67.0
+text = "Name: "
+
+[node name="UserAvgScore" type="Label" parent="login_bg/loginPanel/Control" unique_id=154714241]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 82.0
+offset_right = 75.0
+offset_bottom = 105.0
+text = "Avg. Score: "
+
+[node name="UserMatchesPlayed" type="Label" parent="login_bg/loginPanel/Control" unique_id=1106517752]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 122.0
+offset_right = 62.0
+offset_bottom = 145.0
+text = "Matches: "
+
+[connection signal="pressed" from="Background/Panel/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Background/Panel/VBoxContainer/Leaderboard" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="Background/Panel/VBoxContainer/UploadImage" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="login_ui/Nameplate" to="." method="_on_nameplate_pressed"]
+[connection signal="pressed" from="login_ui/DP" to="." method="_on_dp_pressed"]
+[connection signal="pressed" from="login_bg/loginPanel/CloseButton" to="." method="_on_close_button_pressed"]

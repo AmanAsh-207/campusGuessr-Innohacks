@@ -1,0 +1,253 @@
+[gd_scene format=3 uid="uid://dpm3ysc2f1bt1"]
+
+[ext_resource type="Script" uid="uid://crbms8loyux2l" path="res://result_screen.gd" id="1_jmush"]
+[ext_resource type="Texture2D" uid="uid://b4kc016mlfb0h" path="res://assests/campusMapfinal.svg" id="2_p8482"]
+[ext_resource type="Texture2D" uid="uid://dgvmls3e4e2nq" path="res://assests/location_on.png" id="3_p8482"]
+[ext_resource type="Texture2D" uid="uid://dslfnpcd2c4ma" path="res://assests/Flag.png" id="4_p8482"]
+[ext_resource type="Texture2D" uid="uid://dd0uyk5jxsspy" path="res://assests/game_summary_bg.png" id="5_i43nq"]
+[ext_resource type="FontFile" uid="uid://h3mlikty4l8h" path="res://fonts/slkscr.ttf" id="6_uuyft"]
+[ext_resource type="Texture2D" uid="uid://dnlhg5rqwcbe" path="res://assests/buttons/playagain/playagain_button_normal.png" id="7_j0sjw"]
+[ext_resource type="Texture2D" uid="uid://doqorimi5m5ci" path="res://assests/buttons/playagain/playagain_button_pressed.png" id="8_vommp"]
+[ext_resource type="Texture2D" uid="uid://coubqt5aoxufb" path="res://assests/buttons/playagain/playagain_button_hover.png" id="9_vp2n2"]
+[ext_resource type="Texture2D" uid="uid://bpf2usl5h4sq1" path="res://assests/buttons/mainmenu/main menu_button_normal.png" id="10_w2r3m"]
+[ext_resource type="Texture2D" uid="uid://bqm2ax4cd3kw7" path="res://assests/buttons/mainmenu/main menu_button_pressed.png" id="11_cre1o"]
+[ext_resource type="Texture2D" uid="uid://3m40287mkwf7" path="res://assests/buttons/mainmenu/main menu_button_hover.png" id="12_41etc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uuyft"]
+bg_color = Color(0, 0.09411765, 0.5803922, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0sjw"]
+bg_color = Color(0, 0.09411765, 0.4627451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vommp"]
+bg_color = Color(0, 0.09411765, 0.6862745, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="ResultScreen" type="Control" unique_id=751506441]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jmush")
+
+[node name="MapRoot" type="Node2D" parent="." unique_id=35931285]
+position = Vector2(640, 320)
+scale = Vector2(0.245, 0.245)
+
+[node name="Map" type="Sprite2D" parent="MapRoot" unique_id=1365062903]
+texture = ExtResource("2_p8482")
+
+[node name="GuessMarker" type="Sprite2D" parent="MapRoot" unique_id=541154773]
+texture = ExtResource("3_p8482")
+offset = Vector2(1, 5)
+
+[node name="AnswerMarker" type="Sprite2D" parent="MapRoot" unique_id=1399840164]
+self_modulate = Color(1, 0.8489233, 0.8363447, 1)
+texture = ExtResource("4_p8482")
+offset = Vector2(31, 5)
+
+[node name="DistanceLine" type="Line2D" parent="MapRoot" unique_id=429683788]
+
+[node name="RoundLabel" type="Label" parent="." unique_id=925294488]
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 589.0
+offset_right = 313.0
+offset_bottom = 662.0
+
+[node name="DistanceLabel" type="Label" parent="." unique_id=1478962282]
+z_index = 1
+layout_mode = 0
+offset_left = 28.0
+offset_top = 58.0
+offset_right = 177.0
+offset_bottom = 105.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_uuyft")
+theme_override_font_sizes/font_size = 25
+text = "fdsfasfdf"
+
+[node name="NextButton" type="Button" parent="." unique_id=1675218220]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 634.0
+offset_right = 1235.0
+offset_bottom = 688.0
+theme_override_fonts/font = ExtResource("6_uuyft")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_uuyft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j0sjw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vommp")
+text = "Next
+"
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=406813057]
+z_index = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 13.0
+offset_right = 379.0
+offset_bottom = 75.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_uuyft")
+theme_override_font_sizes/font_size = 50
+text = "fdfafdfad"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=306726679]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 732.0
+texture = ExtResource("5_i43nq")
+
+[node name="CountdownLabel" type="Label" parent="TextureRect" unique_id=1130048197]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -135.5
+offset_right = 230.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_color = Color(0.06666667, 0.69411767, 0.6666667, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.25993314, 0.29054633, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("6_uuyft")
+theme_override_font_sizes/font_size = 53
+text = "game summary"
+horizontal_alignment = 1
+
+[node name="CountdownLabel2" type="Label" parent="TextureRect" unique_id=593061856]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -67.0
+offset_right = 230.0
+offset_bottom = -12.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 11)
+theme_override_colors/font_color = Color(1.2513996e-06, 0.53024244, 0.5409784, 1)
+theme_override_colors/font_shadow_color = Color(6.256998e-07, 0.22355852, 0.2796229, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("6_uuyft")
+theme_override_font_sizes/font_size = 36
+text = "final score :"
+horizontal_alignment = 1
+
+[node name="NextButton2" type="TextureButton" parent="TextureRect" unique_id=90482339]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -307.0
+offset_right = 416.0
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("7_j0sjw")
+texture_pressed = ExtResource("8_vommp")
+texture_hover = ExtResource("9_vp2n2")
+
+[node name="MainMenu" type="TextureButton" parent="TextureRect" unique_id=1436475367]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -307.0
+offset_right = 206.0
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("10_w2r3m")
+texture_pressed = ExtResource("11_cre1o")
+texture_hover = ExtResource("12_41etc")
+
+[node name="finalScoreLabel" type="Label" parent="TextureRect" unique_id=1809265883]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -28.0
+offset_right = -9.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.23529412, 0.4509804, 1)
+theme_override_colors/font_shadow_color = Color(3.85046e-07, 0.67980087, 0.75579816, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("6_uuyft")
+theme_override_font_sizes/font_size = 40
+text = "500"
+horizontal_alignment = 2
+
+[node name="finalScoreLabel2" type="Label" parent="TextureRect" unique_id=911920798]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -28.0
+offset_right = 98.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.23529412, 0.4509804, 1)
+theme_override_colors/font_shadow_color = Color(3.85046e-07, 0.67980087, 0.75579816, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("6_uuyft")
+theme_override_font_sizes/font_size = 40
+text = "/500"
+horizontal_alignment = 2
+
+[connection signal="pressed" from="TextureRect/MainMenu" to="." method="_on_main_menu_pressed"]
